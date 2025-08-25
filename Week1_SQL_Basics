@@ -1,0 +1,141 @@
+# 📊 TheDataImmersed SQL Project – Week 1
+
+## 📌 Project Overview  
+This project is part of *TheDataImmersed Community SQL Practice*, aimed at helping analysts strengthen their SQL foundations through real-world-inspired tasks.  
+
+In *Week 1*, we explored the essentials of SQL, database management, and fundamental query structures.  
+
+## *Objectives:*  
+- Understand relational databases.  
+- Use core SQL commands (SELECT, FROM, WHERE, ORDER BY).  
+- Create and modify tables.  
+- Insert, update, and retrieve data from a sample dataset.  
+
+---
+
+## 🔑 Key Learnings  
+1. *SQL in Action* – Useful for analyzing datasets such as customer orders in e-commerce to determine best-selling products by region.  
+2. *Data Integrity* – Maintained through constraints (PRIMARY KEY, FOREIGN KEY, UNIQUE, NOT NULL, CHECK).  
+3. *DBMS Role* – Tools like MySQL, PostgreSQL, and SQL Server execute SQL queries while ensuring data storage, security, and efficiency.  
+4. *Database vs Table* – A database is like a library, while a table is like a book inside that library.  
+
+---
+
+## 🗂 Dataset Description  
+We worked with a hypothetical *Books Dataset* containing the following fields:  
+
+- book_id (integer, primary key)  
+- title (text)  
+- author (text)  
+- genre (text)  
+- year_published (integer)  
+- price (numeric)  
+
+---
+
+## ⚙ SQL Tasks & Queries  
+
+### 1️⃣ Create Table  
+```sql
+CREATE TABLE books (
+    book_id INT PRIMARY KEY,
+    title TEXT,
+    author TEXT,
+    genre TEXT,
+    year_published INT,
+    price NUMERIC
+)
+```sql
+---
+
+### 2️⃣ Insert Records
+```sql
+INSERT INTO books (book_id, title, author, genre, year_published, price)
+VALUES
+(1,'The Great Gatsby', 'F.Scott','Fiction', '1925', '10.99'),
+(2, 'Pride and Prejudice', 'Jane Austen', 'Fiction','1813','8.99'),
+(3, 'Cosmos', 'Carl Sagan','Science', '1980', '12.5'),
+(4, 'Sapiens', 'Yuval Noah', 'History', '2011', '15'),
+(5, 'Atomic Habits', 'Adam Sandler', 'Self-Help', '2018', '14.99'),
+(6, '1984', 'George Orwell', 'Fiction', '1949', '9.99'),
+(7, 'Educated', 'Tara Westover', 'Memoir','2018', '13.99'),
+(8, 'The Gene', 'Siddhartha', 'Science', '2016', '14.5'),
+(9, 'The Alchemist', 'Paulo Coelho', 'Fiction', '1988', '7.99'),
+(10, 'Guns, Germs, Steel', 'Jared Diamond', 'History', '1997', '16')
+```sql
+
+
+---
+
+### 3️⃣ Retrieve Books with Price > $10
+```sql
+SELECT * 
+FROM books
+WHERE price > 10;
+```sql
+
+---
+
+### 4️⃣ Retrieve Titles & Prices of Books Published After 2000 (Descending Order)
+```sql
+SELECT title, price
+FROM books
+WHERE year_published > 2000
+ORDER BY price DESC
+```sql
+
+✅ Explanation:
+
+SELECT → Chooses title and price columns.
+
+FROM → Uses the books table.
+
+WHERE → Filters books published after 2000.
+
+ORDER BY → Sorts results by descending price.
+
+
+
+---
+
+### 5️⃣ Update Author Name
+```sql
+UPDATE books
+SET author = 'James Clear'
+WHERE title = 'Atomic Habits';
+```sql
+
+---
+
+### 6️⃣ Add New Books
+```sql
+INSERT INTO books (book_id, title, author, genre, year_published, price)
+VALUES
+(11, 'Thinking, Fast and Slow', 'Daniel Kahneman', 'Psychology', 2011, 18.99),
+(12, 'The Power of Habit', 'Charles Duhigg', 'Self-Help', 2012, 12.99);
+```sql
+
+---
+
+### 7️⃣ Retrieve Only Title & Genre
+```sql
+SELECT title, genre
+FROM books;
+```sql
+
+---
+
+## 📌 Conclusion
+
+This project introduced the basics of SQL through hands-on practice involving:
+
+- Table creation
+
+- Data insertion
+
+- Data retrieval (filtering, sorting, selecting specific columns)
+
+- Record updates and additions
+
+
+It reinforces the importance of data integrity, query structuring, and the role of DBMS in managing relational databases.
