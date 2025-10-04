@@ -240,3 +240,7 @@ This advanced SQL project can be applied to:
 - Customer segmentation for marketing (e.g., breakfast buyers vs. afternoon buyers).
 - Product R&D by analyzing unique ingredient popularity.
 - Database optimization in transaction-heavy systems such as POS or e-commerce platforms.
+
+
+  <img width="900" height="400" alt="image" src="https://github.com/user-attachments/assets/d321b81d-feb3-4c17-9bc5-8b853fb1230f" />
+
